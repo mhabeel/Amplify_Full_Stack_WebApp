@@ -2,7 +2,7 @@
 
 
 *{
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Visby CF', sans-serif; 
     margin: 0  ;
     padding: 0;
     box-sizing: border-box;
@@ -17,32 +17,36 @@ header{
     display: flex;
     justify-content:space-between ;
     align-items: center;
-    padding: 10px 100px ;
-    backdrop-filter: blur(8px);
+    padding: 26px 100px ;
+    backdrop-filter: blur(4px);
     
 }
+
 .logo{
     text-decoration:none ;
-    color:blueviolet ;
+    color:#AB82FF ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     font: weight 100; ;
     font-size: 3em;
 
 }
+
 .navigation a{
-    color: rgb(118, 20, 211);
+    color: #AB82FF;
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: 400;
     padding-left: 40px ;
 
 }
 .navigation a:hover{
-    color: #3a06b3;
+    color: #2e2938;
 }
+
 section{
     padding: 200px 100px;
 }
+
 .main{
     width: 100%;
     min-height: 100vh ;
@@ -54,6 +58,7 @@ section{
     background-position: left top;
     background-attachment: fixed;
 }
+
 .main h2{
     color: white;
     font-size: 6em;
@@ -64,6 +69,7 @@ section{
     margin-top: 40px;
     
 }
+
 .main h2 span{
    
     color: white ;
@@ -74,6 +80,8 @@ section{
     font-feature-settings: "smcp" on;
     letter-spacing: 1px;
 }
+
+
 .main h3{
     color: white ;
     font-size: 1.7em;
@@ -82,6 +90,8 @@ section{
     margin-top: 120px;
     margin-bottom: 40px;
 }
+
+
 .main-btn-up{
     
     color: white ;
@@ -103,7 +113,7 @@ section{
     color: white ;
     background-color: rgb(163, 108, 214);
     text-decoration: none;
-    font-size: 1.7em;
+    font-size: 1.4em;
     font-weight: 800;
     display: inline-block;
     padding: 0.5375em 3.1875em;
@@ -118,7 +128,7 @@ section{
 }
 .social-icons a{ 
     color: white;
-    font-size: 1.9em;
+    font-size: 1.6em;
     padding-right: 15px;
     display: inline-block;
     align-items: center;
@@ -127,18 +137,18 @@ section{
    
 }
 .main-btn-up:hover{
-    background-color: #601cfc;
+    background-color: #bea3ff;
     transform: scale(1.1,1.1);
 
 }
 .main-btn-in:hover{
-    background-color: #601cfc;
+    background-color: #bea3ff;
     transform: scale(1.1,1.1);
 }
 .titel{
     display: flex;
     justify-content: center;
-    color: rgb(80, 18, 224);
+    color: #AB82FF;
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 30px;
@@ -150,9 +160,10 @@ section{
     flex-wrap: wrap;
 }
 .card{
-    background-color: white;
+    background-color: #f4eeff;
     width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+    height: 15em;
+    /*box-shadow: 0 5px 25px rgba(1 1 1/ 15%);*/
     border-radius: 20px;
     padding: 25px;
     margin: 20px;
@@ -163,7 +174,7 @@ section{
    
 }
 .icon{
-    color: blue;
+    color: #AB82FF;
     font-size: 5em ;
     text-align: center;
 }
@@ -171,7 +182,7 @@ section{
     text-align: center;
 }
 .info h3{
-    color: blue;
+    color: #AB82FF;
     font: size 1.2em; 
     font-weight: 700;
     margin: 10px;
@@ -179,13 +190,13 @@ section{
 .footer{
     background-color: blueviolet;
     color: white;
-    padding: 2em;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
 
 }
 .footer-title{
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
     margin-top: 10px;
 
