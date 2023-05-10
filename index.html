@@ -1,445 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing page</title>
-<link rel="stylesheet" href="gym.css">
-<style>
-.mediaViewInfo {
-    --web-view-name: Landing page;
-    --web-view-id: Landing_page;
-    --web-scale-on-resize: true;
-    --web-enable-deep-linking: true;
-}
-:root {
-    --web-view-ids: Landing_page;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-}
-
-  
-#Landing_page {
-    position: absolute;
-    width: 100%;
-    height: 2324px;
-    background-color: rgba(255,255,255,1);
-    overflow: hidden;
-    --web-view-name: Landing page;
-    --web-view-id: Landing_page;
-    --web-scale-on-resize: true;
-    --web-enable-deep-linking: true;
-}
-#Mask_Group_1 {
-    position: absolute;
-    width: 110%;
-    height: 959px;
-    left: -22px;
-    top: 0px;
-    overflow: visible;
-}
-#nav_bar {
-    backdrop-filter: blur(8px);
-    position: absolute;
-    width: 100%;
-    height: 122px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-    
-}
-
-#Gym {
-    left: 144px;
-    top: 40px;
-    position: absolute;
-    overflow: visible;
-    width: 81px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 35px;
-    color: rgba(255,255,255,1);
-}
-#Home {
-    left: 50%;
-    top: 45px;
-    position: absolute;
-    overflow: visible;
-    width: 75px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    color: rgba(255,255,255,1);
-}
-#profile {
-    left: 60%;
-    top: 45px;
-    position: absolute;
-    overflow: visible;
-    width: 79px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    color: rgba(255,255,255,1);
-}
-#my_exercises {
-    left: 70%;
-    top: 45px;
-    position: absolute;
-    overflow: visible;
-    width: 162px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    color: rgba(255,255,255,1);
-}
-#Studio {
-    left: 90%;
-    top: 45px;
-    position: absolute;
-    overflow: visible;
-    width: 78px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    color: rgba(255,255,255,1);
-}
-#Your_Workout_Your_Day {
-    left: 130px;
-    top: 308px;
-    position: absolute;
-    overflow: visible;
-    width: 664px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 99px;
-    color: rgba(253,252,255,1);
-}
-#Create_your__Workout_Plan_ {
-    left: 130px;
-    top: 1052px;
-    position: absolute;
-    overflow: visible;
-    width: 660px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 99px;
-    color: rgba(35,32,42,1);
-}
-#Get_your_daily_dose_of_movemen {
-    left: 130px;
-    top: 571px;
-    position: absolute;
-    overflow: visible;
-    width: 635px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgba(253,252,255,1);
-}
-#Get_your_daily_dose_of_movemen_v {
-    left: 130px;
-    top: 1345px;
-    position: absolute;
-    overflow: visible;
-    width: 635px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgba(35,32,42,1);
-}
-#Button_-_Sign_up {
-    position: absolute;
-    width: 218px;
-    height: 58px;
-    left: 130px;
-    top: 684px;
-    overflow: visible;
-}
-#Rectangle_2 {
-    fill: rgba(171,130,255,1);
-}
-.Rectangle_2 {
-    position: absolute;
-    overflow: visible;
-    width: 218px;
-    height: 58px;
-    left: 0px;
-    top: 0px;
-}
-#Sign_up_ {
-    left: 66px;
-    top: 13px;
-    position: absolute;
-    overflow: visible;
-    width: 93px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgba(255,255,255,1);
-}
-#Button_-_log_in {
-    position: absolute;
-    width: 218px;
-    height: 58px;
-    left: 383px;
-    top: 684px;
-    overflow: visible;
-}
-#Rectangle_2_ {
-    fill: rgba(171,130,255,1);
-}
-.Rectangle_2_ {
-    position: absolute;
-    overflow: visible;
-    width: 218px;
-    height: 58px;
-    left: 0px;
-    top: 0px;
-}
-#Log_in {
-    left: 74px;
-    top: 13px;
-    position: absolute;
-    overflow: visible;
-    width: 71px;
-    white-space: nowrap;
-    text-align: left;
-    font-family: Visby CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgba(255,255,255,1);
-}
-#sliders {
-    position: absolute;
-    width: 243px;
-    height: 33px;
-    left: 1595px;
-    top: 880px;
-    overflow: visible;
-}
-#Ellipse_2 {
-    filter: blur(1px);
-    fill: rgba(255,255,255,1);
-    stroke: rgba(255,255,255,1);
-    stroke-width: 1px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.Ellipse_2 {
-    position: absolute;
-    overflow: visible;
-    width: 33px;
-    height: 33px;
-    left: 144px;
-    top: 0px;
-}
-#Ellipse_1 {
-    fill: rgba(218,219,219,1);
-}
-.Ellipse_1 {
-    position: absolute;
-    overflow: visible;
-    width: 9px;
-    height: 9px;
-    left: 0px;
-    top: 12px;
-}
-#Ellipse_3 {
-    fill: rgba(218,219,219,1);
-}
-.Ellipse_3 {
-    position: absolute;
-    overflow: visible;
-    width: 9px;
-    height: 9px;
-    left: 78px;
-    top: 12px;
-}
-#Ellipse_4 {
-    fill: rgba(218,219,219,1);
-}
-.Ellipse_4 {
-    position: absolute;
-    overflow: visible;
-    width: 9px;
-    height: 9px;
-    left: 156px;
-    top: 12px;
-}
-#Ellipse_7 {
-    fill: rgba(218,219,219,1);
-}
-.Ellipse_7 {
-    position: absolute;
-    overflow: visible;
-    width: 9px;
-    height: 9px;
-    left: 234px;
-    top: 12px;
-}
-#Rectangle_4 {
-    fill: rgba(183,183,183,1);
-}
-.Rectangle_4 {
-    position: absolute;
-    overflow: visible;
-    width: 473px;
-    height: 470px;
-    left: 1323px;
-    top: 1078px;
-}
-#Rectangle_5 {
-    fill: rgba(35,32,42,1);
-    stroke: rgba(112,112,112,1);
-    stroke-width: 1px;
-    stroke-linejoin: miter;
-    stroke-linecap: butt;
-    stroke-miterlimit: 4;
-    shape-rendering: auto;
-}
-.Rectangle_5 {
-    position: absolute;
-    overflow: visible;
-    width: 1920px;
-    height: 583px;
-    left: 0px;
-    top: 1741px;
-}
-#Image_1 {
-    display: none;
-    position: absolute;
-    width: 4540px;
-    height: 583px;
-    left: -875px;
-    top: 1741px;
-    overflow: visible;
-}
-
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Gym.css">
+    <title>Fitness WebApp </title>
 </head>
 <body>
-<div id="Landing_page">
-	<img id="Mask_Group_1" src="Mask_Group_1.png" >
-		
-	</svg>
-	<div id="nav_bar">
-		<div id="Gym">
-			<span>Gym</span>
-		</div>
-		<div id="Home">
-			<span>Home</span>
-		</div>
-		<div id="profile">
-			<span>profile</span>
-		</div>
-		<div id="my_exercises">
-			<span>my exercises</span>
-		</div>
-		<div id="Studio">
-			<span>Studio</span>
-		</div>
-	</div>
-	<div id="Your_Workout_Your_Day">
-		<span>Your Workout.<br/>Your Day.</span>
-	</div>
-	<div id="Create_your__Workout_Plan_">
-		<span>Create your <br/>Workout Plan </span>
-	</div>
-	<div id="Get_your_daily_dose_of_movemen">
-		<span>Get your daily dose of movement from home or on the <br/>go with over 500 workouts for your level & goals.</span>
-	</div>
-	<div id="Get_your_daily_dose_of_movemen_v">
-		<span>Get your daily dose of movement from home or on the <br/>go with over 500 workouts for your level & goals.<br/><br/>Get your daily dose of movement <br/>from home or on the <br/>go with over 500 workouts for <br/>your level & goals.</span>
-	</div>
-	<div id="Button_-_Sign_up">
-		<svg class="Rectangle_2">
-			<rect id="Rectangle_2" rx="13" ry="13" x="0" y="0" width="218" height="58">
-			</rect>
-		</svg>
-		<div id="Sign_up_">
-			<span>Sign up </span>
-		</div>
-	</div>
-	<div id="Button_-_log_in">
-		<svg class="Rectangle_2_">
-			<rect id="Rectangle_2_" rx="13" ry="13" x="0" y="0" width="218" height="58">
-			</rect>
-		</svg>
-		<div id="Log_in">
-			<span>Log in</span>
-		</div>
-	</div>
-	<div id="sliders">
-		<svg class="Ellipse_2">
-			<ellipse id="Ellipse_2" rx="16.5" ry="16.5" cx="16.5" cy="16.5">
-			</ellipse>
-		</svg>
-		<svg class="Ellipse_1">
-			<ellipse id="Ellipse_1" rx="4.5" ry="4.5" cx="4.5" cy="4.5">
-			</ellipse>
-		</svg>
-		<svg class="Ellipse_3">
-			<ellipse id="Ellipse_3" rx="4.5" ry="4.5" cx="4.5" cy="4.5">
-			</ellipse>
-		</svg>
-		<svg class="Ellipse_4">
-			<ellipse id="Ellipse_4" rx="4.5" ry="4.5" cx="4.5" cy="4.5">
-			</ellipse>
-		</svg>
-		<svg class="Ellipse_7">
-			<ellipse id="Ellipse_7" rx="4.5" ry="4.5" cx="4.5" cy="4.5">
-			</ellipse>
-		</svg>
-	</div>
-	
-	<svg class="Rectangle_5">
-		<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="1920" height="583">
-		</rect>
-	</svg>
-	<img id="Image_1" src="Image_1.png" srcset="Image_1.png 1x, Image_1@2x.png 2x">
-		
-</div>
+
+    <header>
+        <a href="#" class="logo">GymTimer</a>
+       
+        
+        
+        <nav class="navigation">
+           <a href="#Home">HOME</a>
+           <a href="#features">FEATURES</a>
+           <a href="#contact">CONTACT</a>
+           <a href="#Profile ">PROFILE</a>
+         </nav>
+
+    </header>
+
+    <section class="main" id="Home">
+        <div>
+            <h2>Your Workout.<br><span>Your Day.</span> </h2>
+            <h3>Get your daily dose of movement from home<br> or on the
+                go with over 500 workouts for your level & goals.</h3>
+            <a href="#projects" class="main-btn-up">Sign up</a>
+            <a href="#projects" class="main-btn-in">Sign in</a>
+            
+        </div> 
+
+    </section>
+    <section class="page2" id="features">
+        <h2 class="titel">We like to say we are: </h2>
+        <div class="content">
+            <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-dumbbell"></i>
+            </div>      
+            <div class="info">
+                <h3>EFFICIENT</h3>
+                <p>our Plans are suitable for all porpuses and every age.</p>
+
+            </div>
+
+        </div>
+                <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-brain"></i>                    
+                </div>      
+                <div class="info">
+                    <h3>EFFECTIVE</h3>
+                    <p>Up to date UX and UI tools to "flow through" or "drill down" in our platform whilst creating a user-friendly, familiar design with simple and intuitive tools.</p>
+                </div>
+    
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>      
+                <div class="info">
+                    <h3>DYNAMIC</h3>
+                    <p>Streamline your marketing, focus on retention and maximize revenue through our all-in-one platform empowering your business to excel and exceed.</p>
+    
+                </div>
+
+    </section>
+    <footer class="footer" id="contact">
+        <p class="footer-title"> Copyrights @ <span>GYM</span> </p>
+       <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-google"></i></a>
+        
+    </div>
+
+
+    </footer>
+
+
+    
 </body>
 </html>
