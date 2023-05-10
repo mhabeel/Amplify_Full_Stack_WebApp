@@ -24,7 +24,7 @@ header{
 
 .logo{
     text-decoration:none ;
-    color:#AB82FF ;
+    color:#5f0fff ;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     font: weight 100; ;
     font-size: 3em;
@@ -32,7 +32,7 @@ header{
 }
 
 .navigation a{
-    color: #AB82FF;
+    color: #5f0fff;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 400;
@@ -50,10 +50,12 @@ section{
 .main{
     width: 100%;
     min-height: 100vh ;
+    opacity: 100%;
     display: flex;
     align-items: center;
     background:url(Mask_Group_1.png) no-repeat ;
     background-size:cover ;
+    background-color: #000000;
 
     background-position: left top;
     background-attachment: fixed;
@@ -137,12 +139,12 @@ section{
    
 }
 .main-btn-up:hover{
-    background-color: #bea3ff;
+    background-color: #5f0fff;
     transform: scale(1.1,1.1);
 
 }
 .main-btn-in:hover{
-    background-color: #bea3ff;
+    background-color: #5f0fff;
     transform: scale(1.1,1.1);
 }
 .titel{
