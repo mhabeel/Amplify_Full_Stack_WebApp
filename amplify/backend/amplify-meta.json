@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fullstackwebapppatea-dev-112944-authRole",
+      "UnauthRoleArn": "arn:aws:iam::898531866678:role/amplify-fullstackwebapppatea-dev-112944-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::898531866678:role/amplify-fullstackwebapppatea-dev-112944-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-fullstackwebapppatea-dev-112944-deployment",
+      "UnauthRoleName": "amplify-fullstackwebapppatea-dev-112944-unauthRole",
+      "StackName": "amplify-fullstackwebapppatea-dev-112944",
+      "StackId": "arn:aws:cloudformation:eu-central-1:898531866678:stack/amplify-fullstackwebapppatea-dev-112944/b7ad8c90-e34b-11ed-9802-0a39fc224e28",
+      "AmplifyAppId": "d31d307d2z5v3i"
+    }
+  },
+  "api": {
+    "fullstackwebapppatea": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "a75jczhudvf45bxpmuihsqucki",
+        "GraphQLAPIEndpointOutput": "https://pgs3vuqgknfgxmb74b5jojdwre.appsync-api.eu-central-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-axpgl55r5vfs3ghdfqvbtsai7q"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apifullstackwebapppatea"
+      },
+      "lastPushTimeStamp": "2023-04-25T09:49:33.548Z",
+      "lastPushDirHash": "x3p2FlvuRGKnEkySNAMPBVXxa28="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2023-04-25T09:49:33.742Z",
+      "output": {},
+      "lastPushDirHash": "sEk18DsDU2B4H1X0MEvKxn3FDTc="
+    }
+  }
+}

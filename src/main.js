@@ -1,10 +1,13 @@
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-
+ import './gym.css';
  import awsconfig from "./aws-exports";
  import { createTodo } from "./graphql/mutations";
  import { listTodos } from "./graphql/queries";
  import { onCreateTodo } from "./graphql/subscriptions";
 
+
+
+ 
  Amplify.configure(awsconfig);
 
  async function createNewTodo() {
