@@ -1,48 +1,43 @@
 import { Amplify, API, graphqlOperation } from "aws-amplify";
- import './gym.css';
- import awsconfig from "./aws-exports";
- import { createTodo } from "./graphql/mutations";
- import { listTodos } from "./graphql/queries";
- import { onCreateTodo } from "./graphql/subscriptions";
+import './gym.css';
+import awsconfig from "./aws-exports";
+import { createTodo } from "./graphql/mutations";
+import { listTodos } from "./graphql/queries";
 
+Amplify.configure(awsconfig);
 
+async function createNewTodo() {
+  const todo = {
+    name: "Use AppSync",
+    description: `Realtime and Offline (${new Date().toLocaleString()})`,
+    
+  };
 
- 
- Amplify.configure(awsconfig);
+  const result = await API.graphql(graphqlOperation(createTodo, { input: todo }));
+  const newTodoName = result.data.createTodo.name;
 
- async function createNewTodo() {
-   const todo = {
-     name: "Use AppSync",
-     description: `Realtime and Offline (${new Date().toLocaleString()})`,
-   };
+  const listItem = document.createElement("li");
+  listItem.innerText = newTodoName;
+  document.getElementById("list").appendChild(listItem);
+}
 
-   return await API.graphql(graphqlOperation(createTodo, { input: todo }));
- }
+//document.getElementById("btn").addEventListener("click",() => {
+ // console.log("clicked");
+ // createNewTodo} );
 
- async function getData() {
-   API.graphql(graphqlOperation(listTodos)).then((evt) => {
-     evt.data.listTodos.items.map((todo, i) => {
-       QueryResult.innerHTML += `<p>${todo.name} - ${todo.description}</p>`;
-     });
-   });
- }
+async function getData() {
+  const result = await API.graphql(graphqlOperation(listTodos));
+  const todos = result.data.listTodos.items;
 
- const MutationButton = document.getElementById("MutationEventButton");
- const MutationResult = document.getElementById("MutationResult");
- const QueryResult = document.getElementById("QueryResult");
- const SubscriptionResult = document.getElementById("SubscriptionResult");
+  const list = document.getElementById("list");
+  todos.forEach((todo) => {
+    const listItem = document.createElement("li");
+    listItem.innerText = todo.name;
+    list.appendChild(listItem);
+  });
+}
 
- MutationButton.addEventListener("click", (evt) => {
-   createNewTodo().then((evt) => {
-     MutationResult.innerHTML += `<p>${evt.data.createTodo.name} - ${evt.data.createTodo.description}</p>`;
-   });
- });
-
- API.graphql(graphqlOperation(onCreateTodo)).subscribe({
-   next: (evt) => {
-     const todo = evt.value.data.onCreateTodo;
-     SubscriptionResult.innerHTML += `<p>${todo.name} - ${todo.description}</p>`;
-   },
- });
-
- getData();
+getData();
+document.getElementById("btn").addEventListener("click",() => {
+  console.log("clicked");
+ } );
