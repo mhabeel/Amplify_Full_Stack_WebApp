@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.3.8"
+  },
+  "dependencies": {
+    "aws-amplify": "^5.2.2"
   }
 }

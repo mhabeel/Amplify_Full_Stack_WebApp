@@ -27,8 +27,8 @@ import { Amplify, API, graphqlOperation } from "aws-amplify";
    });
  }
 
- const MutationButton = document.getElementById("MutationEventButton");
- const MutationResult = document.getElementById("MutationResult");
+ const MutationButton = document.getElementById("btn");
+ const MutationResult = document.getElementById("list");
  const QueryResult = document.getElementById("QueryResult");
  const SubscriptionResult = document.getElementById("SubscriptionResult");
 
