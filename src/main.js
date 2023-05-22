@@ -21,9 +21,9 @@ async function createNewTodo() {
   document.getElementById("list").appendChild(listItem);
 }
 
-//document.getElementById("btn").addEventListener("click",() => {
- // console.log("clicked");
- // createNewTodo} );
+document.getElementById("btn").addEventListener("click",() => {
+  console.log("clicked");
+  createNewTodo} );
 
 async function getData() {
   const result = await API.graphql(graphqlOperation(listTodos));
@@ -38,6 +38,3 @@ async function getData() {
 }
 
 getData();
-document.getElementById("btn").addEventListener("click",() => {
-  console.log("clicked");
- } );
