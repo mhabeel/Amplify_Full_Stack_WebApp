@@ -28,22 +28,23 @@ import { Amplify, API, graphqlOperation } from "aws-amplify";
  }
 
  const MutationButton = document.getElementById("btn");
- const MutationResult = document.getElementById("list");
- const QueryResult = document.getElementById("QueryResult");
- const SubscriptionResult = document.getElementById("SubscriptionResult");
+ const MutationResult = document.getElementById("text");
+//  const QueryResult = document.getElementById("QueryResult");
+//  const SubscriptionResult = document.getElementById("SubscriptionResult");
 
  MutationButton.addEventListener("click", (evt) => {
    createNewTodo().then((evt) => {
+    console.log("clicked");
     MutationResult.innerHTML += `<p>${evt.data.createTodo.name} - ${evt.data.createTodo.description}</p>`;
    });
  });
 
- API.graphql(graphqlOperation(onCreateTodo)).subscribe({
-   next: (evt) => {
-     const todo = evt.value.data.onCreateTodo;
-     SubscriptionResult.innerHTML += `<p>${todo.name} - ${todo.description}</p>`;
-   },
- });
+//  API.graphql(graphqlOperation(onCreateTodo)).subscribe({
+//    next: (evt) => {
+//      const todo = evt.value.data.onCreateTodo;
+//      SubscriptionResult.innerHTML += `<p>${todo.name} - ${todo.description}</p>`;
+//    },
+//  });
 
- getData();
+//  getData();
 
