@@ -6,35 +6,22 @@ import { listTodos } from "./graphql/queries";
 
 Amplify.configure(awsconfig);
 
-async function createNewTodo() {
-  const todo = {
-    name: "Use AppSync",
-    description: `Realtime and Offline (${new Date().toLocaleString()})`,
-    
-  };
+const MutationButton = document.getElementById("btn");
+const ListResult = document.getElementById("list");
 
-  const result = await API.graphql(graphqlOperation(createTodo, { input: todo }));
-  const newTodoName = result.data.createTodo.name;
-
-  const listItem = document.createElement("li");
-  listItem.innerText = newTodoName;
-  document.getElementById("list").appendChild(listItem);
-}
-
-document.getElementById("btn").addEventListener("click",() => {
+MutationButton.addEventListener("click", async () => {
   console.log("clicked");
-  createNewTodo} );
+  const todo = {
+    name: "New user",
+    description: `This is a new item (${new Date().toLocaleString()})`,
+  };
+  try {
+    const result = await API.graphql(graphqlOperation(createTodo, { input: todo }));
+    const newItem = result.data.createTodo;
 
-async function getData() {
-  const result = await API.graphql(graphqlOperation(listTodos));
-  const todos = result.data.listTodos.items;
-
-  const list = document.getElementById("list");
-  todos.forEach((todo) => {
-    const listItem = document.createElement("li");
-    listItem.innerText = todo.name;
-    list.appendChild(listItem);
-  });
-}
-
-getData();
+    ListResult.innerHTML = `<li>${newItem.name} - ${newItem.description}</li>`;
+  } catch (error) {
+    console.error("Error creating new item:", error);
+  }
+ 
+});
