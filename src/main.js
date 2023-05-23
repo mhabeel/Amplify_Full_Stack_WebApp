@@ -15,6 +15,7 @@ MutationButton.addEventListener("click", async () => {
     name: "New user",
     description: `This is a new item (${new Date().toLocaleString()})`,
   };
+  
   try {
     const result = await API.graphql(graphqlOperation(createTodo, { input: todo }));
     const newItem = result.data.createTodo;
