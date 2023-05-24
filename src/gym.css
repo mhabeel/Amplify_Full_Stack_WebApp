@@ -162,6 +162,10 @@ section{
     background-color: #5f0fff;
     transform: scale(1.1,1.1);
 }
+.btn_create:hover{
+    background-color: #5f0fff;
+    transform: scale(1.1,1.1);
+}
 .titel{
     display: flex;
     justify-content: center;
@@ -177,10 +181,10 @@ section{
     flex-wrap: wrap;
 }
 .card{
-    background-color: #f4eeff;
+    background-color: white;
     width: 21.25em;
     height: 15em;
-    /*box-shadow: 0 5px 25px rgba(1 1 1/ 15%);*/
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 50%);
     border-radius: 20px;
     padding: 25px;
     margin: 20px;
@@ -188,6 +192,7 @@ section{
 }
 .card:hover {
     transform: scale(1.1,1.1);
+    
    
 }
 .icon{
@@ -218,3 +223,10 @@ section{
     margin-top: 10px;
 
 }
+
+.lists{
+    font-size:1.5em ;
+    font-weight: 500 ;
+    color: white;
+}
+
