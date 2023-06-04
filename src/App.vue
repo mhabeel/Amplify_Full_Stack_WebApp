@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <title>Fitness WebApp </title>
-    
-  <script type="module" crossorigin src="/assets/index-d3005d19.js"></script>
-  <link rel="stylesheet" href="/assets/index-1b4f8c1f.css">
-</head>
-<body>
-    
+<script setup>
+  import { Authenticator } from "@aws-amplify/ui-vue";
+  import "@aws-amplify/ui-vue/styles.css";
+  import { Amplify } from 'aws-amplify';
+   import awsconfig from './aws-exports';
 
-    <header>
+   Amplify.configure(awsconfig);
+
+   
+</script>
+
+<template>
+  <authenticator>
+    <template >
+        <div> hello</div>
+        <!-- <header>
         <a href="#" class="logo">GymTimer</a>
        
         
@@ -50,6 +49,7 @@
 
         <div class="content">
             <div class="card">
+            </div>   
             <div class="icon">
                 <i class="fa-solid fa-dumbbell"></i>
             </div>      
@@ -94,14 +94,11 @@
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-google"></i></a>
-                    
+                   </div>
                 
             
             
-            </footer>
-<div id="app"></div>
-    
-    
-   
-</body>
-</html>
+            </footer> -->
+    </template>
+  </authenticator>
+</template>

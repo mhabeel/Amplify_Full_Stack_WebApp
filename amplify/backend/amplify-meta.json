@@ -31,12 +31,57 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-05-22T18:53:07.099Z",
+      "lastPushTimeStamp": "2023-06-03T16:17:28.007Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apifullstackwebapppatea"
+      }
+    }
+  },
+  "auth": {
+    "AmplifyFullStackWebApp": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
       },
-      "lastPushDirHash": "x3p2FlvuRGKnEkySNAMPBVXxa28="
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "eu-central-1_9IfDRGgQB",
+        "AppClientIDWeb": "6o414u1vj1pg98dh9e72q5rvrd",
+        "AppClientID": "4077eu2smt2f4nj5bsq70454kc",
+        "IdentityPoolId": "eu-central-1:d85a3464-ccf2-4253-a6f1-8b003de313b3",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:898531866678:userpool/eu-central-1_9IfDRGgQB",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "AmplifyFullStackWebApp"
+      },
+      "lastPushTimeStamp": "2023-06-03T16:17:28.014Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/AmplifyFullStackWebApp-cloudformation-template.json",
+        "logicalId": "authAmplifyFullStackWebApp"
+      },
+      "lastPushDirHash": "qdN9DrsfCYkQDs4ggS4iIrT1hlQ="
     }
   },
   "hosting": {
@@ -45,12 +90,11 @@
       "service": "amplifyhosting",
       "type": "manual",
       "output": {},
-      "lastPushTimeStamp": "2023-05-22T18:53:07.122Z",
+      "lastPushTimeStamp": "2023-06-03T16:17:28.035Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
-      },
-      "lastPushDirHash": "sEk18DsDU2B4H1X0MEvKxn3FDTc="
+      }
     }
   }
 }
