@@ -5,15 +5,13 @@
    import awsconfig from './aws-exports';
 
    Amplify.configure(awsconfig);
-
    
 </script>
 
 <template>
-  <authenticator>
-    <template >
-        <div> hello</div>
-        <!-- <header>
+  <authenticator :login-mechanisms="['username']">
+    <template>
+        <header>
         <a href="#" class="logo">GymTimer</a>
        
         
@@ -98,7 +96,10 @@
                 
             
             
-            </footer> -->
+            </footer>
     </template>
   </authenticator>
 </template>
+<style scoped>
+
+</style>
