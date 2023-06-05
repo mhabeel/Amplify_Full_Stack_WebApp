@@ -3,8 +3,8 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "amplifd252b00d",
-    "userPoolName": "AmplifyVueFullStackWebApp",
+    "resourceNameTruncated": "amplifbbfc5bfa",
+    "userPoolName": "AmplifyFullStackWebApp",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -24,19 +24,16 @@
       "Requires Symbols",
       "Requires Uppercase"
     ],
-    "requiredAttributes": [
-      "name",
-      "email"
-    ],
+    "requiredAttributes": [],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Amplifd252b00d_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Amplifbbfc5bfa_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "d252b00d",
-    "resourceName": "AmplifyVueFullStackWebApp",
+    "sharedId": "bbfc5bfa",
+    "resourceName": "AmplifyFullStackWebApp",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [
@@ -49,6 +46,21 @@
     "thirdPartyAuth": false,
     "authProviders": [],
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": [],
+    "hostedUI": false
   }
 }
