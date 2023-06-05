@@ -2,7 +2,7 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "AmplifyFullStackWebA",
+  "projectName": "AmplifyVueFullStackW",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {

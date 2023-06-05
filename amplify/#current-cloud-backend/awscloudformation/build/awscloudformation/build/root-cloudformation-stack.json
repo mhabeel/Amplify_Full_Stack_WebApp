@@ -152,29 +152,15 @@
         }
       }
     },
-    "apifullstackwebapppatea": {
+    "authAmplifyVueFullStackWebApp": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/api/cloudformation-template.json",
-        "Parameters": {
-          "AppSyncApiName": "fullstackwebapppatea",
-          "DynamoDBBillingMode": "PAY_PER_REQUEST",
-          "DynamoDBEnableServerSideEncryption": false,
-          "S3DeploymentBucket": "amplify-fullstackwebapppatea-dev-112944-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/1a62cb92ed53f8d9301dfd648e0982042ece104b",
-          "env": "dev"
-        }
-      }
-    },
-    "authAmplifyFullStackWebApp": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/AmplifyFullStackWebApp-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-amplifyvuefullstackw-main-190722-deployment/amplify-cfn-templates/auth/AmplifyVueFullStackWebApp-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "testAuthIdentityPool",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "amplifbbfc5bfa",
-          "userPoolName": "AmplifyFullStackWebApp",
+          "resourceNameTruncated": "amplifd252b00d",
+          "userPoolName": "AmplifyVueFullStackWebApp",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -185,16 +171,16 @@
           "defaultPasswordPolicy": false,
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": "Requires Lowercase,Requires Numbers,Requires Symbols,Requires Uppercase",
-          "requiredAttributes": "",
+          "requiredAttributes": "name,email",
           "aliasAttributes": "",
           "userpoolClientGenerateSecret": false,
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "",
           "userpoolClientReadAttributes": "",
-          "userpoolClientLambdaRole": "Amplifbbfc5bfa_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "Amplifd252b00d_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "bbfc5bfa",
-          "resourceName": "AmplifyFullStackWebApp",
+          "sharedId": "d252b00d",
+          "resourceName": "AmplifyVueFullStackWebApp",
           "authSelections": "identityPoolAndUserPool",
           "serviceName": "Cognito",
           "usernameAttributes": "email",
@@ -220,19 +206,7 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "hostedUI": false,
-          "env": "dev"
-        }
-      }
-    },
-    "hostingamplifyhosting": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
-        "Parameters": {
-          "appId": "d31d307d2z5v3i",
-          "type": "manual",
-          "env": "dev"
+          "env": "main"
         }
       }
     },
@@ -240,7 +214,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authAmplifyFullStackWebApp"
+        "authAmplifyVueFullStackWebApp"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -352,7 +326,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authAmplifyFullStackWebApp",
+            "authAmplifyVueFullStackWebApp",
             "Outputs.IdentityPoolId"
           ]
         },
