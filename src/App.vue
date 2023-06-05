@@ -1,15 +1,18 @@
 <script setup>
-  import { Authenticator } from "@aws-amplify/ui-vue";
-  import "@aws-amplify/ui-vue/styles.css";
-  import { Amplify } from 'aws-amplify';
-   import awsconfig from './aws-exports';
 
+   import { Authenticator } from "@aws-amplify/ui-vue";
+   import "@aws-amplify/ui-vue/styles.css";
+   import { Amplify } from 'aws-amplify';
+   import { defineComponent } from "vue";
+   import awsconfig from './aws-exports';
+  
    Amplify.configure(awsconfig);
    
+    
 </script>
 
 <template>
-  <authenticator :login-mechanisms="['username']">
+  <authenticator>
     <template>
         <header>
         <a href="#" class="logo">GymTimer</a>
@@ -100,6 +103,7 @@
     </template>
   </authenticator>
 </template>
+
 <style scoped>
 
 </style>

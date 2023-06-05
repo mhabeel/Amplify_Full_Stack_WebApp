@@ -31,7 +31,7 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-06-04T17:37:21.029Z",
+      "lastPushTimeStamp": "2023-06-05T21:04:43.334Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apifullstackwebapppatea"
@@ -76,12 +76,11 @@
         "IdentityPoolName": "testAuthIdentityPool__dev",
         "UserPoolName": "AmplifyFullStackWebApp"
       },
-      "lastPushTimeStamp": "2023-06-04T17:37:21.041Z",
+      "lastPushTimeStamp": "2023-06-05T21:04:43.346Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/AmplifyFullStackWebApp-cloudformation-template.json",
         "logicalId": "authAmplifyFullStackWebApp"
-      },
-      "lastPushDirHash": "qdN9DrsfCYkQDs4ggS4iIrT1hlQ="
+      }
     }
   },
   "hosting": {
@@ -90,7 +89,7 @@
       "service": "amplifyhosting",
       "type": "manual",
       "output": {},
-      "lastPushTimeStamp": "2023-06-04T17:37:21.056Z",
+      "lastPushTimeStamp": "2023-06-05T21:04:43.358Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
