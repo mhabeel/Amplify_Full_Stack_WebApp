@@ -10,20 +10,6 @@
       "StackName": "amplify-fullstackwebapppatea-dev-112944",
       "StackId": "arn:aws:cloudformation:eu-central-1:898531866678:stack/amplify-fullstackwebapppatea-dev-112944/b7ad8c90-e34b-11ed-9802-0a39fc224e28",
       "AmplifyAppId": "d31d307d2z5v3i"
-    },
-    "categories": {
-      "api": {
-        "fullstackwebapppatea": {}
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d31d307d2z5v3i",
-          "type": "manual"
-        }
-      },
-      "auth": {
-        "FullStackwebAppPATeam": {}
-      }
     }
   }
 }

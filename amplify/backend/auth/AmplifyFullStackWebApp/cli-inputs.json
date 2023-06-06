@@ -3,8 +3,8 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "fullst7f4741df",
-    "userPoolName": "FullStackwebAppPATeam",
+    "resourceNameTruncated": "amplifbbfc5bfa",
+    "userPoolName": "AmplifyFullStackWebApp",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -30,10 +30,10 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "FullSt7f4741df_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Amplifbbfc5bfa_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "7f4741df",
-    "resourceName": "FullStackwebAppPATeam",
+    "sharedId": "bbfc5bfa",
+    "resourceName": "AmplifyFullStackWebApp",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [
@@ -46,6 +46,21 @@
     "thirdPartyAuth": false,
     "authProviders": [],
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": [],
+    "hostedUI": false
   }
 }
