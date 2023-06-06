@@ -31,55 +31,10 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-06-05T21:51:36.553Z",
+      "lastPushTimeStamp": "2023-05-23T15:12:20.135Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apifullstackwebapppatea"
-      }
-    }
-  },
-  "auth": {
-    "AmplifyFullStackWebApp": {
-      "customAuth": false,
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE",
-            "REQUIRES_NUMBERS",
-            "REQUIRES_SYMBOLS",
-            "REQUIRES_UPPERCASE"
-          ]
-        },
-        "signupAttributes": [],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "output": {
-        "UserPoolId": "eu-central-1_9IfDRGgQB",
-        "AppClientIDWeb": "6o414u1vj1pg98dh9e72q5rvrd",
-        "AppClientID": "4077eu2smt2f4nj5bsq70454kc",
-        "IdentityPoolId": "eu-central-1:d85a3464-ccf2-4253-a6f1-8b003de313b3",
-        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:898531866678:userpool/eu-central-1_9IfDRGgQB",
-        "IdentityPoolName": "testAuthIdentityPool__dev",
-        "UserPoolName": "AmplifyFullStackWebApp"
-      },
-      "lastPushTimeStamp": "2023-06-05T21:51:36.568Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/AmplifyFullStackWebApp-cloudformation-template.json",
-        "logicalId": "authAmplifyFullStackWebApp"
       }
     }
   },
@@ -89,11 +44,57 @@
       "service": "amplifyhosting",
       "type": "manual",
       "output": {},
-      "lastPushTimeStamp": "2023-06-05T21:51:36.584Z",
+      "lastPushTimeStamp": "2023-05-23T15:12:20.142Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
       }
+    }
+  },
+  "auth": {
+    "FullStackwebAppPATeam": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/FullStackwebAppPATeam-cloudformation-template.json",
+        "logicalId": "authFullStackwebAppPATeam"
+      },
+      "lastPushTimeStamp": "2023-05-23T15:12:20.179Z",
+      "output": {
+        "UserPoolId": "eu-central-1_oxbKyhRrO",
+        "AppClientIDWeb": "4c5amdh6t82o9ht4uvqn9uurbs",
+        "AppClientID": "3m9lhhfafu5au41rs45t7dshug",
+        "IdentityPoolId": "eu-central-1:47462939-bdae-4fff-b7fb-1f613fe4b54c",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:898531866678:userpool/eu-central-1_oxbKyhRrO",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "FullStackwebAppPATeam"
+      },
+      "lastPushDirHash": "P3AEuotMdAotJsh1H+J/RsRTVwg="
     }
   }
 }

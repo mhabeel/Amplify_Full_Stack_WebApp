@@ -166,15 +166,26 @@
         }
       }
     },
-    "authAmplifyFullStackWebApp": {
+    "hostingamplifyhosting": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/AmplifyFullStackWebApp-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "Parameters": {
+          "appId": "d31d307d2z5v3i",
+          "type": "manual",
+          "env": "dev"
+        }
+      }
+    },
+    "authFullStackwebAppPATeam": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/auth/FullStackwebAppPATeam-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "testAuthIdentityPool",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "amplifbbfc5bfa",
-          "userPoolName": "AmplifyFullStackWebApp",
+          "resourceNameTruncated": "fullst7f4741df",
+          "userPoolName": "FullStackwebAppPATeam",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -191,10 +202,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "",
           "userpoolClientReadAttributes": "",
-          "userpoolClientLambdaRole": "Amplifbbfc5bfa_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "FullSt7f4741df_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "bbfc5bfa",
-          "resourceName": "AmplifyFullStackWebApp",
+          "sharedId": "7f4741df",
+          "resourceName": "FullStackwebAppPATeam",
           "authSelections": "identityPoolAndUserPool",
           "serviceName": "Cognito",
           "usernameAttributes": "email",
@@ -220,18 +231,6 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
-          "hostedUI": false,
-          "env": "dev"
-        }
-      }
-    },
-    "hostingamplifyhosting": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-fullstackwebapppatea-dev-112944-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
-        "Parameters": {
-          "appId": "d31d307d2z5v3i",
-          "type": "manual",
           "env": "dev"
         }
       }
@@ -240,7 +239,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authAmplifyFullStackWebApp"
+        "authFullStackwebAppPATeam"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -352,7 +351,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authAmplifyFullStackWebApp",
+            "authFullStackwebAppPATeam",
             "Outputs.IdentityPoolId"
           ]
         },

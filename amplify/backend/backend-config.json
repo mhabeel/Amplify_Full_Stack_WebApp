@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "AmplifyFullStackWebApp": {
+    "FullStackwebAppPATeam": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
