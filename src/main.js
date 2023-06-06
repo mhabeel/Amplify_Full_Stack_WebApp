@@ -7,7 +7,7 @@ import './gym.css';
 // import awsconfig from "./aws-exports";
 // import { createTodo } from "./graphql/mutations";
 // import { listTodos } from "./graphql/queries";
-createApp(App).mount('#app');
+createApp(App).mount('#app'); 
 
 
 // Amplify.configure(awsconfig);
