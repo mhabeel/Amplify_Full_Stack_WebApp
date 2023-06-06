@@ -9,6 +9,7 @@ import './gym.css';
 // import { listTodos } from "./graphql/queries";
 createApp(App).mount('#app');
 
+
 // Amplify.configure(awsconfig);
 
 // const MutationButton = document.getElementById("btn");
